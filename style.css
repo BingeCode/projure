@@ -3,21 +3,51 @@
   src: url("./fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
-body {
+:root {
+  font-size: 16px;
   font-family: "Montserrat-Regular";
+  --primary: #5e85c4;
+  --secondary: #ececec;
+  --transition-speed: 600ms;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary);
 }
 
 header {
+  position: fixed;
   display: flex;
-}
-header .logo {
-  width: 100px;
+  background-color: #fafafa;
 }
 
-nav {
-  background-color: #fafafa;
+nav .nav-item {
+  width: min-content;
+}
+
+main {
+  padding: 1rem;
+}
+
+.logo {
+  height: 60px;
+  width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
