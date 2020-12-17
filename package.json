@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BingeCode/projure/issues"
   },
-  "homepage": "https://github.com/BingeCode/projure#readme"
+  "homepage": "https://github.com/BingeCode/projure#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta1"
+  }
 }
