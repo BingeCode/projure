@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  font-size: 16px;
+  font-family: "Montserrat-Regular";
+  --primary: #5e85c4;
+  --primary-dark: #4a6ec4;
+  --secondary: #dee4ea;
+  --transition-speed: 600ms;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--primary);
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  padding-top: 5rem;
+}
+
+nav {
+  display: flex;
+  position: fixed;
+  height: 5vh;
+  width: 100%;
+  background-color: var(--secondary);
+  box-shadow: 0px 4px 2px 1px rgba(0, 0, 0, 0.2);
+}
+nav .nav-container {
+  display: flex;
+}
+nav .nav-container .logo {
+  height: 100%;
+}
+nav .nav-container .nav-item {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary);
+}
+nav .nav-container .nav-row {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+nav .nav-container .nav-dropdown {
+  display: none;
+}
+
+.nav-item:hover {
+  color: var(--primary-dark);
+}
+
+.nav-item:hover .nav-item::after {
+  background: var(--primary-dark);
+}
+
+.nav-item::after {
+  content: "";
+  display: block;
+  background: var(--primary);
+  height: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+  nav .nav-container {
+    justify-content: space-between;
+  }
+  nav .nav-container .nav-row,
+nav .nav-container .dropdown-content {
+    display: none;
+  }
+  nav .nav-container .dropdown-content {
+    top: 5vh;
+    right: 0;
+    position: absolute;
+    background: var(--secondary);
+    box-shadow: -4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  nav .nav-container .nav-dropdown {
+    display: flex;
+  }
+  nav .nav-container .nav-dropdown:hover .dropdown-content {
+    display: block;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=styles.css.map */
