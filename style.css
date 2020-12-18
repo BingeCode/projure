@@ -8,7 +8,8 @@
   font-size: 16px;
   font-family: "Montserrat-Regular";
   --primary: #5e85c4;
-  --secondary: #ececec;
+  --primary-dark: #4a6ec4;
+  --secondary: #dee4ea;
   --transition-speed: 600ms;
 }
 
@@ -17,6 +18,10 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 body::-webkit-scrollbar {
@@ -31,23 +36,67 @@ body::-webkit-scrollbar-thumb {
   background: var(--primary);
 }
 
-header {
+.navbar {
   position: fixed;
+  height: 5vh;
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  background-color: #fafafa;
-}
-
-nav .nav-item {
-  width: min-content;
-}
-
-main {
-  padding: 1rem;
+  height: 100%;
 }
 
 .logo {
-  height: 60px;
-  width: 100px;
+  height: 100%;
+}
+
+.nav-item {
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.link-text {
+  padding: 0 1rem;
+  color: inherit;
+}
+
+.nav-item:hover {
+  color: var(--primary-dark);
+}
+.nav-item:hover .link-text::after {
+  background: var(--primary-dark);
+}
+
+.link-text::after {
+  content: "";
+  display: block;
+  background: var(--primary);
+  height: 0.1rem;
+}
+
+main {
+  padding-top: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
